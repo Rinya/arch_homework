@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: first-lesson-deployment
+spec:
+    replicas: 2
+    selector:
+       matchLabels:
+          app: frst-ls-app
+    template:
+       metadata:
+          labels:
+             app: frst-ls-app
+       spec:
+          containers:
+          - name: first-lesson
+            image: rinat82/arch-py-hw:1.1
+            ports:
+              - name: web
+                containerPort: 8000
+            livenessProbe:
+              httpGet:
+                port: 8000
+                path: /
+              initialDelaySeconds: 10
+              periodSeconds: 5
+              timeoutSeconds: 2
+            readinessProbe:
+              httpGet:
+                port: 8000
+                path: /health
+              initialDelaySeconds: 10
+              periodSeconds: 5

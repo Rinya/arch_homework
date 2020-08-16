@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "6e5c2eb1-e4a2-4826-9411-b006cafe11c7",
+		"name": "Test_ArchHomework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://arch.homework/otusapp/rinat/health",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "43e7e048-48ee-419d-ad26-eab4344b3626",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    var jsonData = JSON.parse(responseBody);",
+							"    pm.expect(\"ok\").to.eql(jsonData.status)",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/health",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://arch.homework/otusapp/rinat/health",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "43e7e048-48ee-419d-ad26-eab4344b3626",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    var jsonData = JSON.parse(responseBody);",
+							"    pm.expect(\"ok\").to.eql(jsonData.status)",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/health",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
