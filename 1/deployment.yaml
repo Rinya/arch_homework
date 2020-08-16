@@ -14,7 +14,7 @@ spec:
        spec:
           containers:
           - name: first-lesson
-            image: rinat82/arch-py-hw:1.1
+            image: rinat82/arch-py-hw:hw_lesson1.1
             ports:
               - name: web
                 containerPort: 8000
