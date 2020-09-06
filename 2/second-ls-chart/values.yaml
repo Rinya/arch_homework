@@ -5,10 +5,10 @@
 replicaCount: 2
 
 image:
-  repository: second-ls-py
+  repository: rinat82
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1"
+  tag: "hw_lesson2"
 
 imagePullSecrets: []
 nameOverride: ""

@@ -14,6 +14,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = config['DATABASE_URI']
 
 engine = create_engine(config['DATABASE_URI'], echo=True)
 
+
 @app.route("/health")
 def health():
     return '{"status": "ok"}'
