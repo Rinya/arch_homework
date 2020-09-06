@@ -11,6 +11,7 @@ helm install ___Installation name___ ./second-ls-chart
 ```
 
 ### Run postman collection
+install newman: sudo npm install -g newman
 ```
 newman run Second_lesson.postman_collection.json
 ```
