@@ -6,9 +6,8 @@ create new namespace:
 2. Change namespace: kubectl config set-context --current --namespace=___YOUR NAMESPACE___
 
 ### Run HELM
-```
-helm install ___Installation name___ ./second-ls-chart
-```
+helm install ___YOUR RELEASENAME___ ./second-ls-chart
+
 
 ### Run postman collection
 install newman: sudo npm install -g newman
